@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<META charset="utf-8">
+	<title>FORMS</title>
+</head>
+<body>
+<table border="0" width="700px">
+	<tr>
+		<td><p><b>Простая форма поиска с вариантами:</b></p>
+			<p>
+				<form action="http://fe.it-academy.by/TestForm.php" method="post">
+
+	<!--Строка поиска-->	
+				<fieldset>
+   				<legend>Строка поиска</legend>
+   					<p><input id="search_fld" type="search" name="inp_search"  maxlength="10" size="25" placeholder="Найти...">&nbsp;
+   						<input id="search_btn1"  type=submit value="Искать"></p>
+   					<p><input id="site_find_rd" type="radio" name="find" value="on_site_find">на сайте&nbsp;
+    					<input id="google_find_rd" type="radio" name="find" value="google_find">в google</p>
+   				</fieldset>
+  				</form>
+  		</td>
+
+  	<!--Поиск с вариантами-->	
+		<td><p><b>Простая форма поиска с вариантами:</b></p>
+				<form action="http://fe.it-academy.by/TestForm.php" method="post">
+				<fieldset>
+   				<legend>Строка поиска</legend>
+   					<p><input id="search_fld" type="search" name="inp_search"  maxlength="10" size="25" placeholder="Найти..." autofocus>*&nbsp;
+
+   						<input id="search_btn2" type=submit value="Искать"></p>
+   					<p><input id="find_inp" name="find" type="radio" value="site_find">на сайте&nbsp;
+    					<input id="find_radio" name="find" type="radio" value="google_find">в google</p>
+   				</fieldset>
+  				</form>
+		</td>	
+	</tr>
+	<tr>
+
+	<!--Простая форма-->	
+		<td><p><b>Простая форма авторизации:</b></p>
+			<form action="http://fe.it-academy.by/TestForm.php" method="post">
+				<fieldset>
+   				<legend>Авторизуйтесь</legend>
+   					<p><input id="login_fld" type="text" name="login" required="required">*
+   						<label for="login_fld">Логин</p>
+   					<p><input id="pass_fld" type="password" name="password" required="required" minlength="8">*
+   						<label for="pass_fld">Пароль<sup><font size="2">более 8 символов</font></sup></p>
+   					
+   					<p><input id="stsys_ch" type="checkbox"  name="stay_on_system" value="stay_on_system">
+  						<label for="stay_system">Оставаться в системе</label></p>
+    			<input id="search_btn3" type=submit value="Войти">
+   				</fieldset>
+  				</form>
+  		</td>
+
+  	<!--Опрос(голосование)-->	
+		<td valign="top"><p><b>Опрос(голосование):</b></p>
+			<form form action="http://fe.it-academy.by/TestForm.php" method="post">
+				<fieldset>
+				<legend>Как вам?</legend>
+					<label>
+						<input id="nichego_radio" name="opros" type="radio" value="nichego_radio">ничего&nbsp;
+					</label><br />
+					<label>
+						<input id="nichego_radio" name="opros" type="radio" value="neploho_radio">неплохо&nbsp;
+					</label><br />
+					<label>
+						<input id="nichego_radio" name="opros" type="radio" value="horosho_radio">хорошо&nbsp;
+					</label><br />
+					<label>
+						<input id="nichego_radio" name="opros" type="radio" value="super_radio">супер&nbsp;
+					</label><br />
+					<input type="hidden" name="date_voite" value="2013.12.31">
+				<input id="search_btn4" type=submit value="Отправить...">
+				</fieldset>
+			</form>
+		</td>
+	</tr>
+	<tr>
+
+	<!--Опрос(голосование)-->	
+		<td><p><b>Отзыв:</b></p>
+			<form action="http://fe.it-academy.by/TestForm.php" method="post">
+				<fieldset>
+   				<legend>Оставьте Ваш отзыв</legend>
+   					<p><input id="name_fld" type="text" name="login" required="required">*
+   						<label for="name_fld">Имя</p>
+   					<p><input id="email_fld" type="email" name="email" required="required" minlength="8">*
+   						<label for="email_fld">e-mail</p>
+  					<textarea  id="confirmation" placeholder="Форма отправки" name="comment"></textarea><br />
+    				<input id="search_btn5" type=submit value="Отправить">	
+   				</fieldset>
+  				</form>
+
+  	<!--Выпадающий и мультисписки-->				
+		</td>
+		<td valign="top"><p><b>Выпадающий и мульти списки:</b></p>
+			<form action="http://fe.it-academy.by/TestForm.php" method="post">
+				<fieldset>
+				<legend>Города РБ</legend>
+					<select id="goroda" name="goroda">
+						<optgroup label="Города РБ">
+							<option value="Brest">Брест</option>
+							<option value="Minsk">Минск</option>
+							<option value="Vitebsk">Витебск</option>
+						<optgroup label="Города России">
+							<option value="Moscow">Москва</option>
+							<option value="Riazan">Рязань</option>
+							<option value="Magadan">Магадан</option>
+						</optgroup>
+					</select>
+					<select id="goroda_multi" name="goroda_multi" multiple="1" size="8">
+						<optgroup label="Города РБ">
+							<option value="Brest">Брест</option>
+							<option value="Minsk">Минск</option>
+							<option value="Vitebsk">Витебск</option>
+						<optgroup label="Города России">
+							<option value="Moscow">Москва</option>
+							<option value="Riazan">Рязань</option>
+							<option value="Magadan">Магадан</option>
+						</optgroup>
+					</select>
+					<input id="search_btn6" type=submit value="Ok">
+				</fieldset>
+			</form>
+		</td>
+	</tr>
+
+	<!--Загрузка фала на сервер-->
+	<tr>
+		<td><b>Загрузка файла на сервер:</b>
+			<form action="http://fe.it-academy.by/TestForm.php" enctype="multipart/form-data" method="post" >
+				<fieldset>
+				<legend>Upload</legend>
+				Файл:
+					<input type="file" name="upl_file"><br />
+					<label for="srok">Срок хранения:</label><br />
+					<input id="srok" type="text" name="text"><input id="search_btn7" type="submit" value="Звгрузить">
+				</fieldset>
+			</form>
+		</td>	
+
+	<!--Валидация данных-->
+		<td><p><b>Валидация данных HTML5:</b></p>
+		<form action="http://fe.it-academy.by/TestForm.php" method="post">
+				<fieldset>
+				<legend>Строка поиска</legend>
+					<label for="tel_fld">Телефонный номер:</label><br />
+					<input id="rus_fld" type="text" name="rus" placeholder="Только русские буквы" pattern="[а-яёА-ЯЁ\s]+$"><br />
+					<input id="tel_fld" type="text" name="tel" pattern="([+][0-9]{3}-[0-9]{2}-[0-9]{7})" required><br />
+					<input id="search_btn8" type="submit" value="Проверить">
+				</fieldset>
+			</form>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

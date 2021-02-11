@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<META charset="utf-8">
+	<title>FORMS-REGISTRATION</title>
+</head>
+<body>
+<table width="800" border=1>
+	<tr>
+		<td align="center"><h1>Заполните анкету</h1>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<form>
+
+			<!--Личные данные-->
+				<fieldset><legend>Личные данные</legend>
+				<input id="surn_fld" type="text" placeholder="Фамилия" name="familia" required autofocus pattern="[а-яёА-ЯЁ]{1,25}"><br />
+				<input id="name_fld" type="text" placeholder="Имя" name="imia" required pattern="[а-яёА-ЯЁ]{1,20}"><br />
+				<input id="otch_fld" type="text" placeholder="Отчество" name="otchestvo" required pattern="[а-яёА-ЯЁ]{1,24}"><br />
+
+			<!--Паспортные данные-->
+				<fieldset><legend>Паспортные данные</legend>
+					<input id="seria_fld" type="text" size="3" required maxlength="2" pattern="[A-Z]{2}">
+					<input id="nomer_fld" type="text" size="8"  required maxlength="7" pattern="[0-9]{7}">
+				</fieldset>
+
+			<!--Дата Рождения-->
+				<fieldset><legend>Дата рождения</legend>
+					<input id="ear_fld" type="text" name="year" size="6" maxlength="4" placeholder="гггг" pattern="[0-9]{4}"><br />
+					<select id="month_fld" name="month" required><br />
+						<option>Январь</option>
+						<option>Февраль</option>
+						<option>Март</option>
+						<option>Апрель</option>
+						<option>Май</option>
+						<option>Июнь</option>
+						<option>Июль</option>
+						<option>Август</option>
+						<option>Сентябрь</option>
+						<option>Октябрь</option>
+						<option>Ноябрь</option>
+						<option>Декабрь</option>
+					</select><br />
+
+					<input id="day_fld" type="number" max="31" min="01" name="year" step="1" placeholder="д"><br />
+				</fieldset>
+
+			<!--Гражданство-->
+						<select id="grajd_fld" name="grajdanstvo"><br />
+						<option>РБ</option>
+						<option>Россия</option>
+						<option>Польша</option>
+						<option>Украина</option>
+						</select><br />
+						<textarea id="adress_fld" placeholder="Адрес" name="adress"></textarea>
+				<fieldset>
+
+			<!--Интересы-->
+				<legend>Интересы</legend>
+					<input id="ryb_ch" type="checkbox" name=hobby[]>Рыбалка<br />
+					<input id="astro_ch" type="checkbox" name=hobby[]>Астрономия<br />
+					<input id="divind_ch" type="checkbox" name=hobby[]>Дайвинг<br />
+					<input id="marki_ch" type="checkbox" name=hobby[]>Марки<br />
+				</fieldset>
+				<fieldset>
+
+			<!--Домашние животные-->
+					<legend>Домашние животные</legend>
+					<select id="pets_slct" multiple="1" name="pets" size="12">
+					<optgroup label="Попугаи">
+						<option>Волнистый</option>
+						<option>Ара</option>
+						<option>Неразлучник</option>
+					</optgroup>
+					<optgroup label="Рыбы">
+						<option>Караси</option>
+						<option>Окуни</option>
+						<option>Осетр</option>
+					</optgroup>
+					<optgroup label="Птицы">
+						<option>Стая ворон</option>
+						<option>Аист</option>
+						<option>Архиоптерикс</option>	
+					</optgroup>
+				</select>
+
+			<!--Вход и восстановление пароля-->
+				<fieldset>
+					<legend>Данные для входа и восстановления пароля</legend>
+					<input id="login_fld" type="text" name="login" required placeholder="Логин" size="20" minlength="5" pattern="[A-Za-z]{5,}"><br />
+   					<input id="pass_fld" type="password" name="password" required="0" minlength="10" size="20" pattern="[A-Za-z]{10,}" placeholder="Пароль" autocomplete="on">		
+				</fieldset>
+
+			<!--Координаты-->		
+				<fieldset>
+				<legend>Координаты</legend>
+					<input id="email_fld" type="url" name="email" placeholder="url"><br />
+					<input id="email_fld" type="email" name="site" placeholder="email">
+				</fieldset>
+
+			<!--Цифры-->
+				<fieldset>
+				<legend>Цифры</legend>
+				<input id="num_fld" type="number" min="-2.5" max="2.5" step="0.1">
+				<input id="num_fld" type="range" min="1" max="10" step="0.1">
+				</fieldset>
+
+			<!--Кнопки+кнопка-картинка-->	
+				<fieldset>
+				<legend>Кнопки управления</legend>
+				<input id="sub_btn" type="submit"><input id="sub_btn" type="reset"><br />
+				<button id="btnspn_btn" type="button"><span><img src="..\img\email.jpg" ></span>
+				</fieldset>
+			</form>
+		</td>
+	</tr>
+</body>
+</html>
