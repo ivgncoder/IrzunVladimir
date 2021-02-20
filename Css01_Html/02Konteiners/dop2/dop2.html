@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<META charset="utf-8">
+	<title>CSS. Containers. Dop02</title>
+	<style>
+		div.container
+		{
+			background: LightCyan;
+			display: flex;
+			flex-direction: column;
+		}
+		div.main
+		{
+			display: flex;
+			flex-direction:row;
+			background:RosyBrown;
+		}
+		div.containerNavigation
+		{
+			background: LemonChiffon;
+			display: block;
+			float:left;
+		}
+
+		div.containerPages
+		{	
+			display: flex;
+			flex-direction:column;
+			margin-left: 15em;
+			padding: 0px;
+		}
+
+		div.navigation
+		{	
+			width: 15em;
+			background: coral;
+			height: 60%;
+			
+		}
+
+		div.page1
+		{	width:100%;
+			background: Bisque;
+			margin-bottom: 2em;
+			display: inline-block;
+			padding: 4px;
+		}
+
+		.imageRight
+		{
+			float:right;
+		}
+
+		div.footer
+		{
+			background: LightBlue;
+		}
+		
+	</style>
+
+</head>
+<body>
+<div class="container">
+	<div class="main">
+		<div class="navigation">
+				<h1>Блок навигации</h1>
+				<ul>
+					<li>Ширина 15em</li>
+					<li>Должен присутствовать цвет фона</li>
+					<li>Распологается слева</li>
+					<li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>		
+				</ul>
+		</div>
+		<div class="pages">
+			<div class="page1">
+				<h1>Статья 1</h1>
+				<p>	Размер блока:<br />
+					Занимает всю доступную ширину<br />
+					Должен присутствовать цвет фона<br />
+					Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom
+				</p>
+			</div>
+			<div class="page1">
+					<h1>Статья 2</h1>
+				<p>Размер блока:<br />
+					Занимает всю доступную ширину<br />
+					Должен присутствовать цвет фона<br />
+					Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom Картинка вставлена при помощи тега, плавание организованно по праваму краю внутри данной статьи для этой картинки.
+					<img src="../../../img/icon_mail.png" class="imageRight">
+					Занимает всю доступную ширину<br />
+					Должен присутствовать цвет фона<br />
+				</p>
+			</div>
+		</div>
+	</div>
+
+<div class="footer">
+		<p>Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контеном.</p>
+	
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+     <META charset="utf-8">
+     <TITLE>Media&Links</TITLE>
+</HEAD>
+   
+
+	<BODY>
+		<table border=0 width="100%">
+      	<tr colspan="3">
+      		<td>
+
+    <!--ССЫЛКИ на ГЛАВЫ-->
+		<h1>HOW-TO: Программа на Python, Часть 3</h1>
+		      <ul>
+		        <li><a href="th2_media_ex01.html"><i>Программа на Python &mdash; часть 1</i></a></li>
+		        <li><a href="th2_media_ex02.html"><i>Программа на Python &mdash; часть 2</i></a></li>
+		        <li><a href="th2_media_ex03.html"><i>Программа на Python &mdash; часть 3</i></a></li>
+		      </ul>
+
+	<!--Содержание-->
+	      		<h2><a name="soda">Содержание</a></h2>
+	      			<h3>HOW-TO: Программа на Python, Часть 3</h3>
+	    	</td>
+				<td colspan="2"><img src="..\img\Icon-Python.png"></td>
+		</tr>
+       	<tr><td colspan="3">  			
+        			<ul>
+            			<li><a href="#modules"><u>Модули</u></a></li>
+            			<li><a href="#func"><u>Функции</u></a></li>
+        			</ul>
+
+				<p><hr size=3 color="grey"></p>
+				<p> 
+ 					В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и<br />
+					присвоение, операторы <b>if</b> и <b>while</b>. Я обещал, что в этой части мы изучим модули и<br />
+					функции. Давайте начнём.
+      			</p>
+    <!--МОДУЛИ-->
+      		<h2><a name="modules">Модули</a></h2>  
+      		<p><a href="#soda">К содержанию</a></p>
+      			<p>
+					Модули предлагают способ расширить программирование на Python. Вы можете создать<br />
+					свои модули, использовать те, которые поставляются с Python или которые написали<br />
+					другие. В самом Python есть сотни модулей, которые облегчают написание программ.<br />
+					Список модулей, поставляемых с Python, находится по адресу:<br />
+					<a href="http://docs.python.org/modindex.html"><i><u>http://docs.python.org/modindex.html</u></i></a>. Некоторые модули предназначены для определённых<br />
+					операционных систем, но большинство из них кроссплатформенные и работают<br />
+					одинаково на <a href="https://ru.wikipedia.org/wiki/Linux"><u>Linux</u></a>, <a href="https://ru.wikipedia.org/wiki/Macintosh"><u>Mac</u></a> и <a href="https://ru.wikipedia.org/wiki/Windows"><u>Microsoft Windows</u></a>. Для использования внешнего модуля<br />
+					необходимо импортировать его в программу. Один из модулей, поставляемых с Python,<br />
+					называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы<br />
+					используем этот модуль в нашем первом примере.
+     			<br />
+     			<br />
+      				<p>
+    		   		<font face="Courier New">#=======================================<br />
+										# random_example.py<br />
+										# Module example using the random module<br />
+										#=======================================<br />
+										import random<br />
+										# print 14 random integers<br />
+										for cntr in range(1,15):<br />
+										&nbsp;&nbsp;&nbsp;&nbsp;print random.randint(1,10)<br />
+					</p>
+					</font>
+      			</p>
+
+				<p>
+					Давайте разберём код по строкам. Первые четыре строки &mdash; это комментарии, о которых<br />
+					мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать<br />
+					модуль «random». Мы должны явно указать Python на это.
+				<p><hr size=3 color="grey"></p>
+	<!--ФУНКЦИИ-->
+				<h2><a name="func">Функции</h2> 
+				<p><a href="#soda">К содержанию</a></p>
+				<p>
+					Когда мы импортировали модуль random, мы использовали функцию <b>randint().</b> Функция<br />
+					— это блок кода, который создан для того, чтобы вызывать его в программе, обычно,<br />
+					более одного раза. Это упрощает работу над программой и предотвращает набор одного и<br />
+					того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код<br />
+					больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень<br />
+					простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа,<br />
+					сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и<br />
+					результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов<br />
+					чисел. Тогда наш пример будет выглядеть как код ниже.
+				</p>		
+
+				<font face="Courier New">
+									<p>#silly example<br />
+									print '%d + %d = %d ' % (1,2,1+2)<br />
+									print '%d * %d = %d ' % (1,2,1*2)<br />
+									print '%d - %d = %d ' % (1,2,1-2)</p>
+
+									<p>print '\n'<br />
+									print '%d + %d = %d ' % (1,4,1+4)<br />
+									print '%d * %d = %d ' % (1,4,1*4)<br />
+									print '%d - %d = %d ' % (1,4,1-4)</p>
+
+									<p>print '\n'<br />
+									print '%d + %d = %d ' % (10,5,10+5)<br />
+									print '%d * %d = %d ' % (10,5,10*5)<br />
+									print '%d - %d = %d ' % (10,5,10-5)<br />
+									print '\n'</p>
+				</font>
+				<p>
+					Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при<br />
+					написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую<br />
+					назовём <b>«DoTwo».</b> Она будет каждый раз брать два числа, проводить математические<br />
+					операции и выводить результат. Начнём с ключевого слова <b>«def»</b>, которое сигнализирует<br />
+					о том, что мы собираемся определить функцию. После слова <b>«def»</b> добавим название<br />
+					функции и список параметров, если таковые имеются, в круглых скобках. Эту строку<br />
+					необходимо завершить двоеточием. Код функции набирается с отступом. Наш<br />
+					улучшенный простой пример (<u>№2</u>) показан ниже.
+				</p>
+				<p><font face="Courier New">
+					#silly example 2...still silly, but better<br />
+					def DoTwo(num1,num2):<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '%d + %d = %d ' % (num1,num2,num1+num2)<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '%d * %d = %d ' % (num1,num2,num1*num2)<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '%d - %d = %d ' % (num1,num2,num1-num2)<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '\n'<br />
+					DoTwo(1,2)<br />
+					DoTwo(1,4)<br />
+					DoTwo(10,5)<br />
+					</font>
+				</p>
+				<p>
+					Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет что-
+					либо поменять в функции, мы сможем сделать это, не создавая проблем для нашей
+					программы. Чтобы вызвать функцию, нужно написать её имя и параметры.
+				</p>
+		</td></tr>
+
+	<!--Навигация-->
+		<tr><td width="33%" align="left">
+			<!--PREV PAGE-->
+			<a href="dop01_2.html" alt="Вернуться назад" title="Вернуться назад">
+			<svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				 <g>
+				  <title>background</title>
+				  <rect fill="#fff" id="canvas_background" height="27" width="27" y="-1" x="-1"/>
+				 </g>
+				 <g>
+				  <title>Вернуться назад</title>
+				  <image xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAQDAwQDAwQEAwQFBAQFBgoHBgYGBg0JCggKDw0QEA8NDw4RExgUERIXEg4PFRwVFxkZGxsbEBQdHx0aHxgaGxr/2wBDAQQFBQYFBgwHBwwaEQ8RGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhr/wAARCAAWABYDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAcEBQYI/8QAKhAAAQQCAAQEBwEAAAAAAAAAAgEDBAUABgcREkEUMVJhExUiIzJDgbH/xAAYAQADAQEAAAAAAAAAAAAAAAACBQYAA//EACARAAIBBAMAAwAAAAAAAAAAAAEDAgARITEEBRJBYbH/2gAMAwEAAhEDEQA/APUW2bhY3ewSqDW561MCAojYWDYIbpuL+lpPUndcxZGmSKoWnU2C+rZrgqbTx2fx15p62yTl/EzltJ2KHrPEq+rtoaVsysXyakF+IOGXMSL2UO+dvv8AtesUFuI7JSXElx5tFbkRy+24idh5Op/iZUSQ1DVoVAkGIOACZYyc7pKGwZCTGS0bfOK2nD3dZVo9OpNncYW4r0EvENJ0hKaLycRO3umMivD1l284iXknW47zEQoxkDZr9QCTgKiLjOPYdclHIMfYjgG1tXF6Pjcts13833+1ZeInC9nZ5HzerfCBbACC4Rh1Nvgnkhp7dlybva9s9+9DqJb9enhkUGDceNxG0Xz5D0DjGB1/JaUm5v4GPqtylwDMDe6sOhaFD0evcbZNZU2SqHJkmnJXFxjGT7msawzmbk02hCMIiMRiv//Z" id="svg_3" height="22" width="22" y="1.5" x="1.5"/>
+				 </g>
+				</svg>
+			</a>
+		</td>
+          <td width="33%" align="center">
+          	<!--HOME PAGE-->
+          	<a href="dop01_1.html" alt="На главную страницу" title="На главную страницу">
+          	<svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				 <g>
+				  <title>background</title>
+				  <rect fill="#fff" id="canvas_background" height="27" width="27" y="-1" x="-1"/>
+				 </g>
+				 <g>
+				  <title>На главную страницу</title>
+				  <image xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAQDAwQDAwQEAwQFBAQFBgoHBgYGBg0JCggKDw0QEA8NDw4RExgUERIXEg4PFRwVFxkZGxsbEBQdHx0aHxgaGxr/2wBDAQQFBQYFBgwHBwwaEQ8RGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhr/wAARCAAWABYDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAcDBgj/xAApEAABBAIBAwMDBQAAAAAAAAACAQMEBQAGEQcSQRMUMSEjYUNScpGi/8QAFwEAAwEAAAAAAAAAAAAAAAAAAgUGAf/EACMRAAIBAwMEAwAAAAAAAAAAAAECAwAEIQUREhMxQVEykbH/2gAMAwEAAhEDEQA/APUm07dZX2xS9f1qcVVBgKg2Fg2CG6bi/pNJ+5PK5k/0+m1cVJ0fYtgiPr9fWKarytr4VwC5Ekzg9Z2SVrXU+xq5UAZDki6MCNzn7fqHyh/0WVu26guw9ot6IK8HRh1Lk4X1c5QyROexUyontp7UpHCo4lQ3jIxufs0lSWOUM8hzvt5x6rPp9usq0enUmzuMLcV6CXuGk7QlNL8OInj8pjIf00Gwv97t5lbFGKRwyNxlsl7Q7jDhE5/jjA1DTILe4KFwDsCR6JGaK1vJZIg3Env+1auonTFnZZCXFU+EC3bBBcIw7m3wT4Q0/HhclbGk3cyw9gCVkZ41VCe9Zxz/AD2DjGBp11N0GHL4jFbcxJ1RjvVu0LQoej17jbJrKmyVQ5Mk04VxcYxk5NLJLIXc7k02RFRQqjFf/9k=" id="svg_2" height="22" width="22" y="1.5" x="1.5"/>
+				 </g>
+			</svg>
+          </a>
+      </td>
+      <td width="33%"></td>
+     	</tr>
+     </table>
+</BODY>
+</HTML>	

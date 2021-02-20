@@ -1,0 +1,24 @@
+div
+ {
+  background-image: url(../img/cards.png);
+  background-repeat: no-repeat;
+  height: 190px;
+  width: 140px;
+  display: inline-block;
+  margin-right: -19px;
+ }
+
+div.card1
+{
+	background-position: -148px -201px;
+}
+
+div.card2
+{
+	background-position: -436px -599px;
+}
+div.card3
+{
+	background-position: -290px -1396px;
+}
+

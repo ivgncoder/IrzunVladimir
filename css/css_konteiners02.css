@@ -1,0 +1,18 @@
+li.zagl_punkt
+{
+font-weight: bold;
+}
+
+div.spisok
+{
+width:350px;
+}
+
+div.code
+{
+background: black;
+color:green;
+width: 400px;
+max-width: 4;
+overflow: auto;
+}

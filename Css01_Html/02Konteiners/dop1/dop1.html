@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<META charset="utf-8">
+	<title>CSS. Containers. Dop01</title>
+	<style >
+		div.ex1
+		{	width:auto;
+			padding: 2em;
+			background-color:#ccc;
+			background-image: url(border/b-r.gif),url(border/b-l.gif),url(border/t-l.gif),url(border/t-r.gif),
+			url(border/l.gif),url(border/r.gif),url(border/t.gif),url(border/b.gif);
+			background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat-y,repeat-y,repeat-x,repeat-x;
+			background-position: bottom right, bottom left, top left, top right, left,right,top,bottom;
+		}
+
+    	div.ex2
+		{ 	width:auto;
+			padding: 2.6em;
+			background-image: url(border/r-b.png),url(border/l-b.png),url(border/l-t.png),url(border/r-t.png),
+			url(border/l.png),url(border/r.png),url(border/t.png),url(border/b.png);
+			background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat-y,repeat-y,repeat-x,repeat-x;
+			background-position: bottom right, bottom left, top left, top right, left,right,top,bottom;
+		}
+
+			div.ex3
+		{ 	border-style:solid; 
+			border-width: 1.4em;
+			width:80%;
+    		border-image-source: url('img/ramka.png');
+    		border-image-slice: 100;
+    		border-image-repeat: stretch; 
+    		border-image-width: 2;
+    	}
+
+	</style>
+</head>
+<body>
+<div class="ex1">
+	<p>
+	Get the most out of your wide screen monitor with split editing support. Edit files side by side, or edit two locations in the one file. You can edit with as many rows and columns as you wish. Take advantage of multiple monitors by editing with multiple windows, and using multiple splits in each window.
+	</p>
+</div>
+
+<div class="ex2">
+	<p>
+	Get the most out of your wide screen monitor with split editing support. Edit files side by side, or edit two locations in the one file. You can edit with as many rows and columns as you wish. Take advantage of multiple monitors by editing with multiple windows, and using multiple splits in each window.
+	</p>
+</div>
+
+<div class="ex3">
+	<p>
+	Get the most out of your wide screen monitor with split editing support. Edit files side by side, or edit two locations in the one file. You can edit with as many rows and columns as you wish. Take advantage of multiple monitors by editing with multiple windows, and using multiple splits in each window.
+	</p>
+</div>
+<h1>9 DIV</h1>
+<p><div style="width:80%; background: url('border/l.png') repeat-y left">
+   	<div style="background: url('border/t.png') repeat-x top">
+   	<div style="background: url('border/r.png') repeat-y right">
+   	<div style="background: url('border/b.png') repeat-x bottom">
+   	<div style="background: url('border/l-t.png') no-repeat top left">
+   	<div style="background: url('border/r-t.png') no-repeat top right">
+   	<div style="background: url('border/l-b.png') no-repeat bottom left">
+   	<div style="background: url('border/r-b.png') no-repeat bottom right">
+	<div style=" padding:2.5em">
+		<p>
+		Get the most out of your wide screen monitor with split editing support. Edit files side by side, or edit two locations in the one file. You can edit with as many rows and columns as you wish. Take advantage of multiple monitors by editing with multiple windows, and using multiple splits in each window.
+		</p>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+</p>
+
+
+
+
+
+
+</body>
+</html>

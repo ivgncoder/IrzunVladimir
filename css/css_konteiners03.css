@@ -1,0 +1,52 @@
+
+div.container
+{
+	background: LightCyan;
+	
+
+	
+}
+div.containerNavigation
+{
+	background: LemonChiffon;
+	display: block;
+	float:left;
+	
+}
+
+div.containerPages
+{	
+	display: block;
+	margin-left: 15em;
+	padding: 0px;
+
+}
+
+div.navigation
+{
+	width: 15em;
+	background: coral;
+	display: block;
+	float:left;
+}
+
+div.page1
+{
+	background: Bisque;
+	margin-bottom: 2em;
+	display: inline-block;
+}
+
+
+
+
+.imageRight
+{
+float:right;
+}
+
+
+div.footer
+{
+	background: LightBlue;
+}

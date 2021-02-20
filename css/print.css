@@ -1,0 +1,16 @@
+@media print /* Cтили для печати */
+
+{
+    body
+    {
+        font-family: serif;
+        font-size: 55px;
+        color: #fff;
+        background-color: #000;
+    }
+
+    .page 
+    {
+        page-break-after: always;
+    }
+}

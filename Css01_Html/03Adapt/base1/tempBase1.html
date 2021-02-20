@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <META charset="utf-8">
+    <title><title>CSS. Adapt. Base01</title>
+    <style>
+
+        .navbar
+        {   width:auto;
+            display: block;}
+
+        .day
+        {   width: 5.5em;
+            border: solid 0.7px; 
+            font-size: 19pt;
+        }   
+        .submenu {display: none;} 
+
+        .sub
+        {   
+            border: solid 0.8px;
+            font-size: 19pt;    
+            display: block;
+            background-color: Lavender;
+        }
+
+        a {text-decoration: none;}
+
+        .day.PnD:hover .PnS{display: block;background: white;} 
+        .day.PnD:hover .DdayS{background:Khaki;}
+
+        .day.VtD:hover .VtS{display: block;background: white;}
+        .day.VtD:hover .DdayVt{background:Khaki;}
+
+        .day.SrD:hover .SrS{display: block;background: white;}
+        .day.SrD:hover .DdaySr{background:Khaki;}
+
+        .day.ChtD:hover .ChtS{display: block;background: white;}
+        .day.ChtD:hover .DdayCht{background:Khaki;}
+
+        .day.PtD:hover .PtS{display: block;background: white;}
+        .day.PtD:hover .DdayPt{background:Khaki;}
+
+        .day.SbtD:hover .SbtS{display: block;background: white;}
+        .day.SbtD:hover .DdaySbt{background:Khaki;}
+
+
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <div class="day PnD"><div class="DdayS">Понедельник</div>
+            <div class="submenu PnS">
+                <a href="" class="sub">Завтрак</a>
+                <a href="" class="sub">Обед</a>
+                <a href="" class="sub">Ужин</a>
+            </div>
+    </div>
+
+    <div class="day VtD"><div class="DdayVt">Вторник</div>   
+            <div class="submenu VtS">
+                <a href="" class="sub">Завтрак</a>
+                <a href="" class="sub">Обед</a>
+                <a href="" class="sub">Ужин</a>
+            </div>
+    </div>
+
+    <div class="day SrD"><div class="DdaySr">Среда</div>
+            <div class="submenu SrS">
+                <a href="" class="sub">Завтрак</a>
+                <a href="" class="sub">Обед</a>
+                <a href="" class="sub">Ужин</a>
+            </div>
+    </div>
+
+    <div class="day ChtD"><div class="DdayCht">Четверг</div>  
+            <div class="submenu ChtS">
+                <a href="" class="sub">Завтрак</a>
+                <a href="" class="sub">Обед</a>
+                <a href="" class="sub">Ужин</a>
+            </div>
+    </div>
+    <div class="day PtD"><div class="DdayPt">Пятница</div>
+            <div class="submenu PtS">
+                <a href="" class="sub">Завтрак</a>
+                <a href="" class="sub">Обед</a>
+                <a href="" class="sub">Ужин</a>
+            </div>
+    </div>
+
+    <div class="day SbtD"><div class="DdaySbt">Суббота</div> 
+            <div class="submenu SbtS">
+                <a href="" class="sub">Завтрак</a>
+                <a href="" class="sub">Обед</a>
+                <a href="" class="sub">Ужин</a>
+            </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
