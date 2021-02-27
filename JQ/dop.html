@@ -15,12 +15,7 @@
   <title>Hello Bootstap world!</title>
 </head>
 <style type="text/css">
-
-	caption
-	 {	caption-side: bottom;
-	 	text-transform: uppercase;}
-
-	 
+ 
 	 tr:not(:first-child)
 	 {
 	 	text-align: left;
@@ -49,23 +44,19 @@
 	 	background-color: silver;
 	 }
 
-	tbody :hover {background-color: white;cursor: pointer;} /*	 */
+	
+
+	tbody :hover {background-color: white;cursor: pointer;} /*	ТУТ ВОПРОС ! Как?? и кажется не так надо подсветку оформить...
+																Ну и еще исключить самую первую строку из выделений		
+																При tr он светит только одну ячейку*/
+
+	div.show {background-color: LightSeaGreen; width: 170px; color:white;}
 	
 </style>
-<script>
-$(document).ready(function(){
-$("head").append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'>'");
-$("head").append("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css' integrity='sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ' crossorigin='anonymous'");
-
-$("head").append
-
-});	
-
-</script>
 
 <body>
 <table>
- <caption>данные о сотрудниках</caption>
+ <caption>Данные о сотрудниках</caption>
  	<tr>
 		 <th>ФИО</th>
 		 <th>пол</th> 
@@ -115,5 +106,42 @@ $("head").append
 			 <td>923123379</td>
  	</tr>
  </table>
+ <div class="show"></div>
 </body>
+<script>
+$(document).ready(function(){
+$("head").append("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'>'");
+$("head").append("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css' integrity='sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ' crossorigin='anonymous'");
+
+$("head").append
+
+var arr=new Array();
+$(".show").text("Скрытых строк нет");
+$("tr").click(function() {
+arr.push(this);	
+$(".show").text("Показать строки");
+console.log(arr);
+$(this).toggle( "slow", function() {
+  	//console.log(this);
+  	//console.log(arr);
+  
+  });
+});
+$(".show").click(function() {
+$.each(arr,function(index,value){
+		
+	console.log(value);
+	$(value).toggle( "slow", function() {
+	arr=[];
+	$(".show").text("Скрытых строк нет");
+  	//console.log(this);
+  	//console.log(arr);
+  });
+});
+});
+
+});		
+</script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </html>
