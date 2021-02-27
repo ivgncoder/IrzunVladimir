@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<style>
+tr{height: 50px;}
+td{width: 50px;}
+table
+	{
+		border: 2px solid black;
+		border-collapse: collapse;
+		
+	}
+tr:nth-child(even)
+	{
+	 	background-color: Khaki;
+	 	color: red;
+
+	}
+
+tr>td:nth-child(even)
+	{
+	 	background-color: Khaki;
+	 	color: red;
+
+	}
+tr:nth-child(even)>td:nth-child(even)
+	{
+	 	background-color: white;
+	 	color:black;
+	}
+
+table 
+	{
+  		counter-reset: rowNumber 65;
+  		font-size: 2em;
+  		text-align: center;
+	}
+
+ tr td::before {
+  
+  counter-increment: rowNumber -1;
+  content: counter(rowNumber);
+	}
+
+counter-increment: a -1;
+
+</style>
+<body>
+<table>
+	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+</table>
+
+</body>
+</html>
